@@ -23,7 +23,9 @@
 
 
     <script>
-        document.getElementById("addNew").addEventListener("click", addOne);
+        let addNew = document.getElementById("addNew");
+        addNew.addEventListener("click", addOne);
+        // document.getElementById("addNew").addEventListener("click", addOne);
 
         function addOne() {
             let input = document.getElementById("addItem").value;
