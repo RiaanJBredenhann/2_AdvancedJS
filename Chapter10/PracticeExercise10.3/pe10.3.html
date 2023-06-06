@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Exercise 10.3</title>
+</head>
+
+<body>
+    <div>This is onr thing</div>
+    <div>This is a second ting</div>
+    <div>This is the final thing</div>
+
+    <script>
+        let elements = [];
+
+        for (let i = 0; i < 3; i++) {
+            elements.push(document.getElementsByTagName("div"));
+        }
+
+        console.log(elements[1]);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Exercise 12.5</title>
+</head>
+
+<body>
+
+    <script>
+        let input1 = prompt("String Input");
+        let input2 = prompt("Number Input");
+
+        console.log("STRING INPUT");
+        errorCatching(input1);
+        console.log("NUMBER INPUT");
+        errorCatching(input2);
+
+
+        function errorCatching(val) {
+            try {
+                if (isNaN(val)) {
+                    throw TypeError();
+                } else {
+                    console.log("Is a number")
+                }
+            } catch (e) {
+                console.log("Error:", e)
+            } finally {
+                console.log(val);
+            }
+        }
+    </script>
+</body>
+
+</html>

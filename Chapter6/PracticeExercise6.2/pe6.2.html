@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Exercise 6.2</title>
+</head>
+
+<body>
+
+    <script>
+        let inputWord = prompt("Type your name");
+
+        addTwoWords(inputWord);
+
+        function addTwoWords(str) {
+            let arrWords = ["Happy", "Sad", "House", "Pepperoni", "Powerbank", "Loadshedding", "Computer", "Programming"];
+            let randomWord = arrWords[Math.floor(Math.random() * arrWords.length)];
+            console.log(str, randomWord);
+        }
+    </script>
+</body>
+
+</html>

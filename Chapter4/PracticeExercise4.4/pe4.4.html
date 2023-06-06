@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Exercise 4.4</title>
+</head>
+
+<body>
+
+    <script>
+        const randomNumber = Math.floor(Math.random() * 6);
+        let answer = "Something went wrong";
+        let question = prompt("Ask me anything");
+
+        // switch statement for random number
+        // output depends on the random number passed to the switch statement
+        switch (randomNumber) {
+            case 0:
+                answer = "It will work out";
+                break;
+            case 1:
+                answer = "Maybe, maybe not";
+                break;
+            case 2:
+                answer = "Probably not";
+                break;
+            case 3:
+                answer = "Highly likely";
+                break;
+            default:
+                answer = "I don't know about that";
+        }
+        
+        let output = "You asked me " + question + ". I think that " + answer;
+        console.log(output);
+    </script>
+</body>
+
+</html>

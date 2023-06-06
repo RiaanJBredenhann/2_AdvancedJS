@@ -1,0 +1,87 @@
+<!--DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter Project 12</title>
+</head>
+
+<body>
+    <div id="stored"></div>
+
+    <script>
+        let message1 = "This is in storage";
+        let message2 = "This is also in storage";
+        localStorage.setItem("Hello", message1);
+        localStorage.setItem("World", message2)
+
+        if (localStorage.getItem("Hello")) {
+            document.getElementById("stored").innerHTML = localStorage.getItem("Hello");
+        }
+
+        console.log(window.localStorage.getItem(window.localStorage.key(0)));
+        console.log(window.localStorage.getItem(window.localStorage.key(1)));
+        window.localStorage.removeItem("Hello");
+        console.log(window.localStorage);
+        window.localStorage.clear();
+        console.log(window.localStorage);
+    </script>
+</body>
+
+</html-->
+
+
+
+<!--DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter Project 12</title>
+</head>
+
+<body>
+
+    <script>
+        let str = "{\"name\": \"Maaike\", \"age\": 30}";
+        let obj = JSON.parse(str);
+        console.log(obj.name, "is", obj.age);
+
+        let dog = {
+            "name": "wiesje",
+            "breed": "dachshund"
+        };
+
+        let strdog = JSON.stringify(dog);
+        console.log(typeof strdog);
+        console.log(strdog);
+    </script>
+</body>
+
+</html-->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        
+    </script>
+</body>
+
+</html>

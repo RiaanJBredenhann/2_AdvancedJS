@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter Project 10</title>
+
+    <style>
+        div {
+            height: 100px;
+            width: 100px;
+            background-color: yellow;
+        }
+
+        .hide {
+            display: none;
+        }
+
+        .square {
+            height: 100px;
+            width: 100px;
+            background-color: yellow;
+        }
+
+        .square.blue {
+            background-color: blue;
+        }
+
+        .circle {
+            border-radius: 50%;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <p id="magic">I might disappear and appear.</p>
+    <button onclick="toggleDisplay()">Magic!</button>
+    <button onclick="changeVisibility()">Magic!</button>
+
+    <div id="red"></div>
+    <div id="orange"></div>
+    <div id="yellow"></div>
+    <div id="green"></div>
+    <div id="blue"></div>
+    <div id="indigo"></div>
+    <div id="violet"></div>
+    <button onclick="rainbowify()">Make me a rainbow</button>
+
+    <div id="shape" class="square blue"></div>
+    <button onclick="disappear()">Disappear!</button>
+
+    <button onclick="change()">Change!</button>
+
+    <div id="shape" class="square"></div>
+    <button onclick="changeAttr()">Change attributes...</button>
+
+    <div id="square" style="width:100px;height:100px;background-color:grey;">Click for magic</div>
+
+    <button onclick="addRandomNumber()">Add a number</button>
+
+    <script>
+
+        function toggleDisplay() {
+            let p = document.getElementById("magic");
+            if (p.style.display === "none") {
+                p.style.display = "block";
+            } else {
+                p.style.display = "none";
+            }
+        }
+
+        function rainbowify() {
+            let divs = document.getElementsByTagName("div");
+            for (let i = 0; i < divs.length; i++) {
+                divs[i].style.backgroundColor = divs[i].id;
+            }
+        }
+
+        function disappear() {
+            document.getElementById("shape").classList.add("hide");
+        }
+
+        function change() {
+            document.getElementById("shape").classList.remove("blue");
+        }
+
+        function changeVisibility() {
+            document.getElementById("shape").classList.toggle("hide");
+        }
+
+        function changeAttr() {
+            let el = document.getElementById("shape");
+            el.setAttribute("style", "background-color:red;border:1px solid black");
+            el.setAttribute("id", "new");
+            el.setAttribute("class", "circle");
+        }
+
+        window.onload = function () {
+            document.getElementById("square").addEventListener("click", changeColor);
+        }
+
+        function changeColor() {
+            let red = Math.floor(Math.random() * 256);
+            let green = Math.floor(Math.random() * 256);
+            let blue = Math.floor(Math.random() * 256);
+            this.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+        }
+
+        function addRandomNumber() {
+            let el = document.createElement("p");
+            el.innerText = Math.floor(Math.random() * 100);
+            document.body.appendChild(el);
+        }
+
+    </script>
+</body>
+
+</html>

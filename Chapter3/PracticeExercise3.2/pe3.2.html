@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Exercise 3.2</title>
+</head>
+
+<body>
+
+    <script>
+        // 1. initialise array
+        const myList = [];
+        // 2. add items to the top of the array myList
+        myList.push("Milk", "Bread", "Apples");
+        // 3. add the items to the array from index 1 and replace the item in index 1
+        myList.splice(1, 1, "Bananas", "Eggs");
+        // 4. save the last item of the array to the variable and remove it form the array
+        const removeLast = myList.pop();
+        // 5. output the removed item
+        console.log(removeLast);
+        // 6. sort the array alphabetically
+        myList.sort();
+        // 7. output the index of the item with the name "Milk"
+        console.log(myList.indexOf("Milk"));
+        // 8. insert the items from index 1 without replacing any items
+        myList.splice(1, 0, "Carrots", "Lettuce");
+        // 9. create another list with items
+        const myList2 = ["Juice", "Pop"];
+        // 10. combine the two arrays
+        const finalList = myList.concat(myList2, myList2);
+        // 11. output the last index of the combined arrays
+        console.log(finalList.lastIndexOf("Pop"));
+        console.log(finalList);
+    </script>
+</body>
+
+</html>

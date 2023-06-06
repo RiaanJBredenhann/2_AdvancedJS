@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter Project 6.6</title>
+</head>
+
+<body>
+
+    <script>
+        let factorial = Number(prompt("Factorial"));
+        recursion(factorial);
+        console.log(factorial);
+
+        function recursion(val) {
+            if (val > 1) {
+                factorial *= val - 1;
+                recursion(--val);
+            }
+        }
+
+    </script>
+</body>
+
+</html>

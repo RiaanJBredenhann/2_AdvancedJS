@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Exercise 11.8</title>
+</head>
+
+<body>
+    <div class="output"></div>
+        <input class="input" type="text" name="first" id="inputFirstName">
+        <input class="input" type="text" name="last" id="inputLastName">
+
+    <script>
+        let output = document.querySelector(".output");
+        let inputs = document.querySelectorAll(".input");
+
+        inputs.forEach((element) => {
+            element.addEventListener("keydown", (e) => {
+                if (!isNaN(e.key)) {
+                    output.textContent += e.key
+                }
+            });
+
+            element.addEventListener("keyup", (e) => {
+                console.log(e.key);
+            });
+
+            element.addEventListener("paste", (e) => {
+                console.log("pasted");
+            });
+        });
+    </script>
+</body>
+
+</html>

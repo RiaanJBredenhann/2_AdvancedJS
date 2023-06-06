@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Exercise 4.5</title>
+</head>
+
+<body>
+
+    <script>
+        let prize = prompt("Pick a number 0-10");
+        prize = Number(prize);
+        let output = "My Selection: ";
+
+        // switch statement for the prize
+        // output will change depending on the value passed to the switch
+        switch (prize) {
+            case 0:
+                output += "Gold ";
+            case 1:
+                output += "Coin ";
+                break;
+            case 2:
+                output += "Big ";
+            case 3:
+                output += "Box of ";
+            case 4:
+                output += "Silver ";
+            case 5:
+                output += "Bricks ";
+                break;
+            default:
+                output += "Sorry Try Again";
+        }
+
+        console.log(output);
+    </script>
+</body>
+
+</html>

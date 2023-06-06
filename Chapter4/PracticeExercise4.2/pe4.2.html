@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Exercise 4.2</title>
+</head>
+
+<body>
+
+    <script>
+        let age = prompt("How old are you?");
+        age = Number(age);
+        let message;
+
+        // checks if age >= 21
+        // if age >= 21, then allow entrance and drink
+        if (age >= 21) {
+            message = "You can enter and drink.";
+        // else if age >= 19, then allow entrance but no drink
+        } else if (age >= 19) {
+            message = "You can enter but not drink.";
+        // else no engrance
+        } else {
+            message = "You are not allowed in!";
+        }
+
+        console.log(message);
+    </script>
+</body>
+
+</html>

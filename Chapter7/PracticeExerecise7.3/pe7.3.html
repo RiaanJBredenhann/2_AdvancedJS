@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Exercise 7.3</title>
+</head>
+
+<body>
+
+    <script>
+        class Animal {
+            #sound;
+            #species;
+            constructor(snd, spec) {
+                this.#sound = snd;
+                this.#species = spec;
+            }
+
+            get getTypeAndSound() {
+                console.log(this.#species, this.#sound);
+            }
+        }
+
+        class Beast extends Animal {
+            #origin;
+            constructor(snd, spec, ogn) {
+                super(snd, spec);
+                this.#origin = ogn;
+            }
+
+            get getOrigin() {
+                return this.#origin;
+            }
+        }
+
+        Animal.prototype.canSwim = true;
+
+
+
+        let animal1 = new Animal("Moo", "Bos taurus");
+        animal1.canSwim = false;
+
+        let beast1 = new Beast("Screech", "Corvus corax", "Norse")
+
+
+        console.log(animal1);
+        console.log(beast1);
+
+
+    </script>
+</body>
+
+</html>

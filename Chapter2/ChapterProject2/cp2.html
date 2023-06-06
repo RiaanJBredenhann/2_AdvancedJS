@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter Project 2</title>
+</head>
+
+<body>
+
+    <script>
+        //-----Miles-to-kilometers converter-----//
+
+        console.log("Miles-to-kilometers converter");
+
+        //Convert miles to kilometers.
+        //1 mile equals 1.60934 kilometers.
+
+        // distance in miles to convert to kilometers
+        let myDistanceMiles = 130;
+
+        // conversion
+        let myDistanceKM = myDistanceMiles * 1.60934;
+
+        // outputs the converted distance in a detailed message
+        console.log("The distance of " + myDistanceMiles + " miles is equal to " + myDistanceKM + " kilometers");
+
+        ///////////////////////////////////////////////////////////
+
+        //-----BMI calculator-----//
+
+        console.log("BMI calculator");
+
+        //1 inch = 2.54 centimetres.
+        //2.2046 pounds in a kilo
+
+        let inches = 72;
+        let pounds = 180;
+        let weight = pounds / 2.2046; // in kilos
+        let height = inches * 2.54; // height in centimetres
+
+        // outputs the weight and height of the individual in kilograms and centimeters respectively
+        console.log(weight, height);
+
+        // calculate sthe BMI using the eight and height
+        let bmi = weight / (height / 100 * height / 100);
+
+        // outputs the result to the console
+        console.log(bmi);
+    </script>
+</body>
+
+</html>

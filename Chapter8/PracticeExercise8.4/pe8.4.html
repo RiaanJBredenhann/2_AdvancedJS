@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Exercise 8.4</title>
+</head>
+
+<body>
+
+
+    <script>
+        let str = "I am VERY HAPPY TodaY aND woUld LIKE to go For A JoG";
+
+        console.log(convert(str));
+
+        function convert(s) {
+            let finalArr = [];
+            s = s.toLowerCase();
+            let tempArr = s.split(" ");
+            
+            tempArr.forEach(function (e) {
+                let word = e.slice(0, 1).toUpperCase() + e.slice(1);
+                finalArr.push(word);
+            })
+            return finalArr.join(" ");
+        }
+
+    </script>
+</body>
+
+</html>

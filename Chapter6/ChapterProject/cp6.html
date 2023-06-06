@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter Project 6</title>
+</head>
+
+<body>
+
+    <script>
+        // Recursive Function
+
+        // let input = Number(prompt("Give starting number"));
+
+        // countToTenRecursively(input);
+
+        // function countToTenRecursively(x) {
+        //     console.log(x);
+        //     if (x < 10) {
+        //         countToTenRecursively(++x);
+        //     }
+        // }
+
+
+        //  Set Timeout Order
+
+        let one = () => console.log("One");
+        let two = () => console.log("Two");
+
+        let three = () => {
+            console.log("Three");
+            one();
+            two();
+        }
+
+        let four = () => {
+            console.log("Four");
+            setTimeout(one, 0);
+            three();
+        }
+
+        four();
+
+        let youGotThis = function () {
+            console.log("You're doing really well, keep coding!");
+        };
+        setTimeout(youGotThis, 2500);
+
+    </script>
+</body>
+
+</html>

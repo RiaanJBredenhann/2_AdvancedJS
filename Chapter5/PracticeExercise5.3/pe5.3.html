@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Exercise 5.3</title>
+</head>
+
+<body>
+
+    <script>
+        const myWork = [];
+
+        // repeat the loop a set number of times
+        for (let x = 1; x <= 10; x++) {
+            let stat = x % 2 ? true : false;
+            let temp = {
+                name: `Lesson ${x}`, status: stat
+            };
+            
+            myWork.push(temp);
+        }
+
+        console.log(myWork);
+    </script>
+</body>
+
+</html>
