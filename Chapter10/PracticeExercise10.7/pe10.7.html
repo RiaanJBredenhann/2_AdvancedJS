@@ -9,11 +9,16 @@
 </head>
 
 <body>
+    <button id="press", onclick="message(this)">Press Me!</button>
     <button id="donotpress", onclick="stop()">Do NOT Press Me!</button>
 
     <script>
+        function message(e) {
+            console.log(e);
+        }
+
         function stop() {
-            alert("I SAID DO NOT PRESS ME!!!")
+            console.log("I SAID DO NOT PRESS ME!!!");
         }
     </script>
 </body>

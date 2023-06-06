@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Practice Exercise 10.4</title>
 </head>
+
 <body>
     <div class="example">this is a class 1 div</div>
-    <div class="example">this is a class 2 div</div>
-    <div class="example">this is a class 3 div</div>
+    <p class="example">this is a class 2 paragraph</p>
+    <button class="example">this is a class 3 button</button>
 
     <script>
-    let elements = document.getElementsByClassName("example")
-    for (let i = 0; i < elements.length; i++) {
-        console.log(elements[i]);
-    }
+        let elements = document.getElementsByClassName("example");
+
+        for (let i = 0; i < elements.length; i++) {
+            console.log(elements[i]);
+        }
     </script>
 </body>
+
 </html>
