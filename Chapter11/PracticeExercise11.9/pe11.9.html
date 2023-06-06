@@ -32,6 +32,7 @@
         const dragme = document.querySelector("#dragme");
 
         dragme.addEventListener("dragstart", (e) => {
+            dragStart();
             dragme.style.opacity = .5;
         });
 
@@ -43,15 +44,17 @@
 
         boxes.forEach(box => {
             box.addEventListener("dragenter", (e) => {
+                console.log("dragenter");
                 e.target.classList.add('red');
             });
 
             box.addEventListener("dragover", (e) => {
+                console.log("dragover");
                 e.preventDefault();
             });
 
             box.addEventListener("dragleave", (e) => {
-                //console.log("leave");
+                console.log("dragleave");
                 e.target.classList.remove('red');
             });
 
@@ -62,7 +65,7 @@
             });
         });
 
-        function dragStart(e) {
+        function dragStart() {
             console.log("Started");
         }
     </script>
