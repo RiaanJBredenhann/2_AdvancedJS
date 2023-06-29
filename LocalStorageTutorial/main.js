@@ -15,7 +15,7 @@ function store() {
     window.localStorage.setItem(key, JSON.stringify(car));
 }
 
-// retrieves all itoms from localStorage
+// retrieves all items from localStorage
 function retrieveRecords() {
     console.log("Retrieved Records");
 
@@ -38,7 +38,7 @@ function removeItem() {
 
 // clears the entire localStorage
 function clearStorage() {
-    localstorage.clear();
+    localStorage.clear();
     console.log("Cleared Records");
 }
 
